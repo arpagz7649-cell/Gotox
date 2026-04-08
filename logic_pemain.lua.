@@ -1,0 +1,12 @@
+-- logic_pemain.lua
+-- Ini script yang bakal dibaca sama Godot nanti
+
+function hitung_kecepatan(base_speed)
+    print("Lua: Menghitung kecepatan baru...")
+    return base_speed * 2  -- Power up!
+end
+
+function on_item_touch(item_name)
+    return "Kamu menyentuh " .. item_name
+end
+
