@@ -1,0 +1,157 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-sans)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 24px;border-bottom:0.5px solid var(--color-border-tertiary);background:var(--color-background-primary)}
+.logo{font-size:18px;font-weight:500;color:var(--color-text-primary)}
+.logo span{color:#378ADD}
+.nav-links{display:flex;gap:8px}
+.nav-btn{padding:6px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);font-size:13px;cursor:pointer}
+.nav-btn.active{background:var(--color-background-info);color:var(--color-text-info);border-color:var(--color-border-info)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--color-background-info);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--color-text-info)}
+.hero{padding:32px 24px 20px;border-bottom:0.5px solid var(--color-border-tertiary)}
+.hero h1{font-size:22px;font-weight:500;color:var(--color-text-primary);margin-bottom:6px}
+.hero p{font-size:14px;color:var(--color-text-secondary)}
+.search-bar{margin-top:16px;display:flex;gap:8px}
+.search-bar input{flex:1;padding:8px 14px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:var(--color-background-secondary);color:var(--color-text-primary);font-size:14px}
+.search-bar button{padding:8px 16px;border-radius:var(--border-radius-md);border:none;background:#378ADD;color:#fff;font-size:13px;font-weight:500;cursor:pointer}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:20px 24px;border-bottom:0.5px solid var(--color-border-tertiary)}
+.stat{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:14px 16px}
+.stat-label{font-size:12px;color:var(--color-text-secondary);margin-bottom:4px}
+.stat-val{font-size:22px;font-weight:500;color:var(--color-text-primary)}
+.stat-val.blue{color:#378ADD}
+.stat-val.green{color:#3B6D11}
+.section{padding:20px 24px}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.section-title{font-size:16px;font-weight:500;color:var(--color-text-primary)}
+.see-all{font-size:13px;color:var(--color-text-info);cursor:pointer;background:none;border:none}
+.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+.game-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;cursor:pointer}
+.game-thumb{height:100px;display:flex;align-items:center;justify-content:center;font-size:28px}
+.game-info{padding:10px 12px}
+.game-name{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:4px}
+.game-meta{display:flex;align-items:center;justify-content:space-between}
+.game-tag{font-size:11px;padding:2px 8px;border-radius:var(--border-radius-md);background:var(--color-background-info);color:var(--color-text-info)}
+.game-players{font-size:11px;color:var(--color-text-secondary)}
+.create-btn{display:flex;align-items:center;gap:8px;padding:14px 16px;border-radius:var(--border-radius-lg);border:0.5px dashed var(--color-border-secondary);background:transparent;color:var(--color-text-secondary);font-size:14px;cursor:pointer;width:100%;margin-top:16px}
+.plus{width:28px;height:28px;border-radius:50%;background:var(--color-background-info);color:var(--color-text-info);display:flex;align-items:center;justify-content:center;font-size:18px;line-height:1}
+.sidebar-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+.sidebar-row:last-child{border-bottom:none}
+.rank{font-size:13px;font-weight:500;color:var(--color-text-secondary);width:20px}
+.sr-thumb{width:36px;height:36px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;font-size:18px}
+.sr-info{flex:1}
+.sr-name{font-size:13px;font-weight:500;color:var(--color-text-primary)}
+.sr-count{font-size:11px;color:var(--color-text-secondary)}
+.main-layout{display:grid;grid-template-columns:1fr 260px;gap:0}
+.sidebar{border-left:0.5px solid var(--color-border-tertiary);padding:20px}
+</style>
+<h2 class="sr-only">Game platform dashboard UI — Roblox-style browser game lobby</h2>
+
+<div class="nav">
+  <div class="logo">Play<span>Sphere</span></div>
+  <div class="nav-links">
+    <button class="nav-btn active">Discover</button>
+    <button class="nav-btn">My Games</button>
+    <button class="nav-btn">Create</button>
+    <button class="nav-btn">Store</button>
+  </div>
+  <div class="nav-right">
+    <button class="nav-btn">+ Create Game</button>
+    <div class="avatar">YO</div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Explore games</h1>
+  <p>Temukan dunia baru, buat sendiri, dan mainkan bersama jutaan pemain.</p>
+  <div class="search-bar">
+    <input placeholder="Cari game, dunia, atau kreator..." />
+    <button>Cari</button>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-label">Online sekarang</div><div class="stat-val blue">12,847</div></div>
+  <div class="stat"><div class="stat-label">Total game</div><div class="stat-val">3,204</div></div>
+  <div class="stat"><div class="stat-label">Kreator aktif</div><div class="stat-val green">892</div></div>
+  <div class="stat"><div class="stat-label">Game baru hari ini</div><div class="stat-val">18</div></div>
+</div>
+
+<div class="main-layout">
+  <div>
+    <div class="section">
+      <div class="section-header">
+        <span class="section-title">Game populer</span>
+        <button class="see-all">Lihat semua</button>
+      </div>
+      <div class="game-grid">
+        <div class="game-card">
+          <div class="game-thumb" style="background:#E6F1FB">🏰</div>
+          <div class="game-info">
+            <div class="game-name">Castle Wars</div>
+            <div class="game-meta"><span class="game-tag">Action</span><span class="game-players">4.2k main</span></div>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-thumb" style="background:#EAF3DE">🌊</div>
+          <div class="game-info">
+            <div class="game-name">Ocean World</div>
+            <div class="game-meta"><span class="game-tag">Adventure</span><span class="game-players">2.8k main</span></div>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-thumb" style="background:#FAEEDA">🚀</div>
+          <div class="game-info">
+            <div class="game-name">Space Race</div>
+            <div class="game-meta"><span class="game-tag">Racing</span><span class="game-players">1.9k main</span></div>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-thumb" style="background:#FBEAF0">🧟</div>
+          <div class="game-info">
+            <div class="game-name">Zombie City</div>
+            <div class="game-meta"><span class="game-tag">Survival</span><span class="game-players">3.1k main</span></div>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-thumb" style="background:#EEEDFE">⚔️</div>
+          <div class="game-info">
+            <div class="game-name">Arena Fight</div>
+            <div class="game-meta"><span class="game-tag">PvP</span><span class="game-players">5.6k main</span></div>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="game-thumb" style="background:#E1F5EE">🌿</div>
+          <div class="game-info">
+            <div class="game-name">Build & Farm</div>
+            <div class="game-meta"><span class="game-tag">Casual</span><span class="game-players">987 main</span></div>
+          </div>
+        </div>
+      </div>
+      <button class="create-btn"><span class="plus">+</span> Buat game baru lo sendiri</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <div class="section-title" style="margin-bottom:14px">Top kreator minggu ini</div>
+    <div class="sidebar-row"><span class="rank">1</span><div class="sr-thumb" style="background:#E6F1FB">👾</div><div class="sr-info"><div class="sr-name">DevSulthan</div><div class="sr-count">12 game • 18k plays</div></div></div>
+    <div class="sidebar-row"><span class="rank">2</span><div class="sr-thumb" style="background:#EEEDFE">🎮</div><div class="sr-info"><div class="sr-name">NightCoder</div><div class="sr-count">8 game • 11k plays</div></div></div>
+    <div class="sidebar-row"><span class="rank">3</span><div class="sr-thumb" style="background:#EAF3DE">🌟</div><div class="sr-info"><div class="sr-name">PixelKing</div><div class="sr-count">6 game • 9k plays</div></div></div>
+    <div class="sidebar-row"><span class="rank">4</span><div class="sr-thumb" style="background:#FAEEDA">🔥</div><div class="sr-info"><div class="sr-name">GameForge</div><div class="sr-count">5 game • 7k plays</div></div></div>
+    <div class="sidebar-row"><span class="rank">5</span><div class="sr-thumb" style="background:#FBEAF0">🎯</div><div class="sr-info"><div class="sr-name">ZeroLag</div><div class="sr-count">4 game • 5k plays</div></div></div>
+
+    <div style="margin-top:20px;padding-top:16px;border-top:0.5px solid var(--color-border-tertiary)">
+      <div class="section-title" style="margin-bottom:12px">Kategori</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">Action</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">Adventure</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">RPG</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">Survival</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">Racing</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">Casual</span>
+        <span style="font-size:12px;padding:4px 10px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);color:var(--color-text-secondary);cursor:pointer">PvP</span>
+      </div>
+    </div>
+  </div>
+</div>
